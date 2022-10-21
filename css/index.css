@@ -1,0 +1,102 @@
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #385AC6 0%, #448AEB 100%);
+}
+
+.cards {
+    width: 1000px;
+    height: 950px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    justify-content: space-between;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: calc(25% - 20px);
+    height: calc(33% - 24px);
+    transform: scale(1);
+    margin: 12px 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:active {
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.back-card {
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: #FFB200;
+    border: 2px solid #FFFFFF;
+    border-radius: 42px;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 42px;
+}
+
+.angry {
+    background: #F6F6F6 url(../img/angry.png) no-repeat center center / 45%;
+    transform: rotateY(180deg);
+}
+
+.cherry {
+    background: #F6F6F6 url(../img/cherry.png) no-repeat center center / 45%;
+    transform: rotateY(180deg);
+}
+
+.chocolate {
+    background: #F6F6F6 url(../img/chocolate.png) no-repeat center center / 45%;
+}
+
+.heart {
+    background: #F6F6F6 url(../img/heart.png) no-repeat center center / 45%;
+}
+
+.peace {
+    background: #F6F6F6 url(../img/peace.png) no-repeat center center / 45%;
+}
+
+.wine {
+    background: #F6F6F6 url(../img/wine.png) no-repeat center center / 45%;
+}
+
+.btn {
+  visibility: hidden;
+  cursor: pointer;
+  padding: 10px 35px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 34px;
+  color: #385BC6;
+  text-align: center;
+  background-color: #F6F6F6;
+  border-radius: 16px;
+  border: none;
+}
+
